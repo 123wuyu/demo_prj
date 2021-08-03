@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试界面</title>
+
+
+    <script type="text/javascript">
+         // 1. 不用var, 使用let声明局部变量（块级作用域） （const声明只读变量）
+         let name = '李思';
+         let age = 18;
+
+         let person = {
+             name: name,
+             age: age,
+             showname: function(){
+                 alert(this.name);
+             }
+         }
+         person.showname();
+
+         // 2. js对象简化写法
+         let person2 = {
+             name,
+             age,
+             showname() {
+               alert(this.name);
+             }
+         }
+         person2.showname();
+
+        // 3. 箭头函数
+        // ES6标准新增的一种新的函数：Arrow Function
+        // let log = function() {
+        // 		alert('no param')
+        // }
+        let log = () => { alert('no param') };
+        log();
+
+        // let show = function(response) {
+        // 		alert(response)
+        // }
+        let show = response => { alert(response) };
+        show('hello');
+
+        // let show = function(a, b) {
+        // 		alert(a +b)
+        // }
+        // let show = (a, b) => { alert(response) };
+    </script>
+
+
+</head>
+<body>
+
+<h3>测试界面</h3>
+
+</body>
+</html>

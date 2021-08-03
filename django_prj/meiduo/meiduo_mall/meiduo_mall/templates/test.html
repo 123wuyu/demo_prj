@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试界面</title>
+
+
+    <script type="text/javascript" src="/static/js/axios-0.18.0.min.js"></script>
+
+    <script type="text/javascript">
+        // 通过axios发get请求
+
+        axios.get('http://127.0.0.1:8000/test2/')
+            .then(response => {
+                console.log(response);
+                alert(response.data.message)
+            })
+            .catch(error => {
+                alert('状态码: ' + error.response.status)
+            });
+
+         axios.post('http://127.0.0.1:8000/test2/')
+            .then(response =>  {
+                alert(response.data.message)
+            })
+            .catch(error => {
+                alert('状态码: ' + error.response.status)
+            });
+
+
+        /**
+        axios.get('http://127.0.0.1:8000/test2/')
+            .then(function (response) {
+                alert(response.data.message)
+            })
+            .catch(function (error) {
+                alert('状态码: ' + error.response.status)
+            });
+
+         axios.post('http://127.0.0.1:8000/test2/')
+            .then(function (response) {
+                alert(response.data.message)
+            })
+            .catch(function (error) {
+                alert('状态码: ' + error.response.status)
+            });
+        */
+
+    </script>
+
+</head>
+<body>
+
+<h3>测试界面</h3>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+# 搜索结果页面每页数量下限
+SEARCH_RESULTS_PER_PAGE_MIN = 10
+
+# 搜索结果页面每页数量下限
+SEARCH_RESULTS_PER_PAGE_MAX = 50
